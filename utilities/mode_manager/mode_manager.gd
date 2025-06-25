@@ -1,7 +1,7 @@
 class_name ModeManager extends Node
 
 enum Mode {
-	SELECT,
+	DEFAULT,
 	DRAW,
 	ERASE,
 }
@@ -10,7 +10,7 @@ var cursor_arrow: Texture2D = preload('res://ui/cursors/cursor_arrow.png')
 var cursor_eraser: Texture2D = preload('res://ui/cursors/cursor_eraser.png')
 var cursor_pen: Texture2D = preload('res://ui/cursors/cursor_pen.png')
 
-var mode: Mode = Mode.SELECT:
+var mode: Mode = Mode.DEFAULT:
 	set(m):
 		if !Mode.values().has(m) or m == mode:
 			return
@@ -27,5 +27,5 @@ func _unhandled_input(event: InputEvent) -> void:
 		mode = Mode.DRAW
 	if event.is_action_pressed('mode_erase'):
 		mode = Mode.ERASE
-	if event.is_action_pressed('mode_select'):
-		mode = Mode.SELECT
+	if event.is_action_pressed('mode_default'):
+		mode = Mode.DEFAULT
