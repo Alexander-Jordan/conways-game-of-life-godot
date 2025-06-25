@@ -21,9 +21,15 @@ func _process(delta: float) -> void:
 		return
 	draw()
 	if SM.is_playing:
+		SM.time_passed_since_last_step += delta
 		if SM.time_passed_since_last_step == 0.0:
 			step_forward()
-		SM.time_passed_since_last_step += delta
+
+func _ready() -> void:
+	SM.reset.connect(func():
+		clear()
+		cells_add(SM.steps[SM.current_step_index].cells)
+	)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Engine.is_editor_hint():

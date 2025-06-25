@@ -13,9 +13,11 @@ var time_passed_since_last_step: float = 0.0:
 	set(tp):
 		time_passed_since_last_step = 0.0 if tp < 0 or (tp >= 1.0 / steps_per_second) else tp
 
+signal reset
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed('reset'):
-		pass
+		simulation_reset()
 	if event.is_action_pressed('play'):
 		is_playing = true
 	if event.is_action_pressed('stop'):
@@ -25,6 +27,11 @@ func simulation_clear() -> void:
 	steps.clear()
 	steps = [SimulationStep.new()]
 	current_step_index = 0
+
+func simulation_reset() -> void:
+	current_step_index = 0
+	time_passed_since_last_step = 0.0
+	reset.emit()
 
 func step_backward() -> SimulationStep:
 	var can_create_new_step: bool = !steps[current_step_index].cells.is_empty()
