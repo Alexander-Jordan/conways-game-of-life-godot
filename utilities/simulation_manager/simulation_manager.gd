@@ -22,6 +22,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		is_playing = true
 	if event.is_action_pressed('stop'):
 		is_playing = false
+	for number in range(1, 10):
+		if event.is_action_pressed('speed_' + str(number)):
+			steps_per_second = float(number) * number
 
 func simulation_clear() -> void:
 	steps.clear()
