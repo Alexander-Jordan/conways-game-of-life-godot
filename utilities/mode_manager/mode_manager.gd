@@ -30,13 +30,3 @@ var mode: Mode = Mode.DEFAULT:
 		else:
 			Input.set_custom_mouse_cursor(cursor_arrow)
 #endregion
-
-#region FUNCTIONS
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed('mode_draw'):
-		mode = Mode.DRAW
-	if event.is_action_pressed('mode_erase'):
-		mode = Mode.ERASE
-	if event.is_action_pressed('mode_default'):
-		mode = Mode.DEFAULT
-#endregion

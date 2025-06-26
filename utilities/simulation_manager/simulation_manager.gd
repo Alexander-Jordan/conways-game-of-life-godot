@@ -59,27 +59,6 @@ func _process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		mouse_pressed = event.pressed
-		return
-	
-	if event.is_action_pressed('clear'):
-		simulation_clear()
-	elif event.is_action_pressed('clear_step'):
-		step_clear()
-	if event.is_action_pressed('hexagon'):
-		hexagon = !hexagon
-	if event.is_action_pressed('play'):
-		is_playing = true
-	if event.is_action_pressed('reset'):
-		simulation_reset()
-	if event.is_action_pressed('step_backward'):
-		step_backward()
-	if event.is_action_pressed('step_forward'):
-		step_forward()
-	if event.is_action_pressed('stop'):
-		is_playing = false
-	for number in range(1, 10):
-		if event.is_action_pressed('simulation_steps_' + str(number)):
-			steps_per_second = float(number) * number
 #endregion
 
 #region CELLS
