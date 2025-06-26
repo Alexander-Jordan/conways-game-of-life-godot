@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://b3521ktevotqg"]
+[gd_scene load_steps=2 format=3 uid="uid://b3521ktevotqg"]
+
+[ext_resource type="Script" uid="uid://dr35f8l6ipjja" path="res://utilities/simulation_camera/simulation_camera.gd" id="1_6almw"]
 
 [node name="Main" type="Node2D"]
+
+[node name="SimulationCamera" type="Camera2D" parent="."]
+script = ExtResource("1_6almw")
+metadata/_custom_type_script = "uid://dr35f8l6ipjja"
