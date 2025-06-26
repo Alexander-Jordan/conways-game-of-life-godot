@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3521ktevotqg"]
+[gd_scene load_steps=3 format=3 uid="uid://b3521ktevotqg"]
 
 [ext_resource type="Script" uid="uid://dr35f8l6ipjja" path="res://utilities/simulation_camera/simulation_camera.gd" id="1_6almw"]
+[ext_resource type="PackedScene" uid="uid://cs8abha7tofgp" path="res://ui/ui_tools/ui_tools.tscn" id="2_60rri"]
 
 [node name="Main" type="Node2D"]
 
 [node name="SimulationCamera" type="Camera2D" parent="."]
 script = ExtResource("1_6almw")
 metadata/_custom_type_script = "uid://dr35f8l6ipjja"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UITools" parent="CanvasLayer" node_paths=PackedStringArray("camera") instance=ExtResource("2_60rri")]
+camera = NodePath("../../SimulationCamera")
