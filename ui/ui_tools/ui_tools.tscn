@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cs8abha7tofgp"]
+[gd_scene format=3 uid="uid://cs8abha7tofgp"]
 
 [ext_resource type="Script" uid="uid://b5kgd13ja0m81" path="res://ui/ui_tools/ui_tools.gd" id="1_3tonn"]
 [ext_resource type="Texture2D" uid="uid://blfs0mka75oyk" path="res://ui/buttons/ui_button_arrow.png" id="2_jqqe7"]
@@ -75,7 +75,7 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("9_nlfs3")
 region = Rect2(32, 0, 32, 32)
 
-[node name="UITools" type="Control"]
+[node name="UITools" type="Control" unique_id=806468471]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,7 +86,7 @@ mouse_filter = 1
 script = ExtResource("1_3tonn")
 metadata/_custom_type_script = "uid://b5kgd13ja0m81"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=512767245]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -94,15 +94,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=2089665858]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=587492963]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=995642413]
 layout_mode = 2
 size_flags_horizontal = 2
 theme_override_constants/margin_left = 8
@@ -110,10 +110,10 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer" unique_id=161300569]
 layout_mode = 2
 
-[node name="texturebutton_arrow" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="texturebutton_arrow" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=303968574]
 layout_mode = 2
 size_flags_vertical = 4
 toggle_mode = true
@@ -121,7 +121,7 @@ texture_normal = SubResource("AtlasTexture_r83pn")
 texture_pressed = SubResource("AtlasTexture_fwin6")
 stretch_mode = 5
 
-[node name="texturebutton_pen" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="texturebutton_pen" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=799914256]
 layout_mode = 2
 size_flags_vertical = 4
 toggle_mode = true
@@ -129,7 +129,7 @@ texture_normal = SubResource("AtlasTexture_bq8h5")
 texture_pressed = SubResource("AtlasTexture_83cmr")
 stretch_mode = 5
 
-[node name="texturebutton_eraser" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="texturebutton_eraser" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=552790560]
 layout_mode = 2
 size_flags_vertical = 4
 toggle_mode = true
@@ -137,14 +137,14 @@ texture_normal = SubResource("AtlasTexture_swgo1")
 texture_pressed = SubResource("AtlasTexture_l3ytb")
 stretch_mode = 5
 
-[node name="texturebutton_clear" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+[node name="texturebutton_clear" type="TextureButton" parent="VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer" unique_id=2005707890]
 layout_mode = 2
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_nob5u")
 texture_pressed = SubResource("AtlasTexture_xfler")
 stretch_mode = 5
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=132758474]
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_constants/margin_left = 8
@@ -152,14 +152,14 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="vslider_zoom" type="VSlider" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+[node name="vslider_zoom" type="VSlider" parent="VBoxContainer/HBoxContainer/MarginContainer2" unique_id=2038759292]
 layout_mode = 2
 min_value = 0.01
 max_value = 2.0
 step = 0.1
 value = 1.01
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1824589004]
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/margin_left = 8
@@ -167,24 +167,24 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=327621696]
 layout_mode = 2
 
-[node name="texturebutton_beginning" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="texturebutton_beginning" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=895239280]
 layout_mode = 2
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_4m72i")
 texture_pressed = SubResource("AtlasTexture_bnieg")
 stretch_mode = 5
 
-[node name="texturebutton_backward" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="texturebutton_backward" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=288766629]
 layout_mode = 2
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_a8i6m")
 texture_pressed = SubResource("AtlasTexture_6talt")
 stretch_mode = 5
 
-[node name="texturebutton_play" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="texturebutton_play" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=844174537]
 layout_mode = 2
 size_flags_vertical = 4
 toggle_mode = true
@@ -192,21 +192,21 @@ texture_normal = SubResource("AtlasTexture_c02lr")
 texture_pressed = SubResource("AtlasTexture_0w032")
 stretch_mode = 5
 
-[node name="texturebutton_forward" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="texturebutton_forward" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=2044986058]
 layout_mode = 2
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_gaeav")
 texture_pressed = SubResource("AtlasTexture_56n05")
 stretch_mode = 5
 
-[node name="texturebutton_trash" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="texturebutton_trash" type="TextureButton" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=247115069]
 layout_mode = 2
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_nob5u")
 texture_pressed = SubResource("AtlasTexture_xfler")
 stretch_mode = 5
 
-[node name="hslider_speed" type="HSlider" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+[node name="hslider_speed" type="HSlider" parent="VBoxContainer/MarginContainer/HBoxContainer" unique_id=1800767340]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
